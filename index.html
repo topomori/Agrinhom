@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Feira Rural de Medianeira</title>
+     <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Feira Rural de Medianeira</h1>
+     <nav>
+         <ul>
+             <li><a href="#sobre">Sobre</a></li>
+             <li><a href="#produtos">Produtos</a></li>
+             <li><a href="#beneficios">Benefícios</a></li>
+             <li><a href="#contato">Contato</a></li>
+             <li><a href="#carrinho" id="link-carrinho">🛒 <span id="contador-carrinho">0</span></a></li>
+        </ul>
+     </nav>
+  </header>
+
+<!-- Reemplazar la sección hero existente con este slider -->
+<section class="hero-slider">
+  <div class="slides-container">
+    <!-- Slide 1 -->
+    <div class="slide active" style="background-image: url('img/hero1.jpg');">
+      <div class="slide-content">
+        <h2>Do campo direto para sua mesa</h2>
+        <p>Conectando produtores locais com consumidores urbanos</p>
+        <a href="#produtores" class="btn">Conheça os produtores</a>
+      </div>
+    </div>
+    
+    <!-- Slide 2 -->
+    <div class="slide" style="background-image: url('img/hero2.jpg');">
+      <div class="slide-content">
+        <h2>Alimentos Frescos e Orgânicos</h2>
+        <p>Colhidos diariamente com cuidado sustentável</p>
+        <a href="#produtos" class="btn">Ver Produtos</a>
+      </div>
+    </div>
+    
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image: url('img/hero3.jpg');">
+      <div class="slide-content">
+        <h2>Feira Semanal</h2>
+        <p>Toda quarta e sábado no centro de Medianeira</p>
+        <a href="#contato" class="btn">Como Chegar</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Controles del slider -->
+  <button class="slider-prev">❮</button>
+  <button class="slider-next">❯</button>
+  
+  <!-- Indicadores de paginación -->
+  <div class="slider-dots"></div>
+</section>
+
+<section id="sobre">
+  <h2>Sobre a Feira</h2>
+  <p>A Feira Rural de Medianeira é uma iniciativa fundamental que promove o consumo consciente e valoriza diretamente o trabalho do agricultor local. Através de um modelo de venda direta, eliminamos intermediários entre produtores rurais e consumidores urbanos, garantindo preços mais justos para ambas as partes. Nossa feira oferece exclusivamente produtos sazonais cultivados com técnicas sustentáveis, livres de agrotóxicos, priorizando variedades tradicionais da nossa região. Semanalmente, reunimos dezenas de famílias agricultoras que trazem colheitas frescas diretamente do campo - desde hortaliças orgânicas até derivados artesanais como queijos, mel e geleias.</p>
+</section>
+
+  <section id="produtos">
+    <h2>Produtos em Destaque</h2>
+    <div class="produtos-container">
+      <!-- Produto 1: Melancia -->
+      <div class="produto">
+        <img src="img/melancia.jpg" alt="Melancia" class="produto-img">
+        <h3>Melancia</h3>
+        <p>Produtor: Clara Mossmam</p>
+        <p>R$ 6,00/kg</p>
+        <button onclick="adicionarAoCarrinho('Melancia', 6, 'Clara Mossmam')">Adicionar ao Carrinho</button>
+      </div>
+
+      <!-- Produto 2: Tomates -->
+      <div class="produto">
+        <img src="img/tomate.jpg" alt="Tomates frescos" class="produto-img">
+        <h3>Tomates Orgânicos</h3>
+        <p>Produtor: Sérgio da Silva</p>
+        <p>R$ 7,00/kg</p>
+        <button onclick="adicionarAoCarrinho('Tomates Orgânicos', 7, 'Sérgio da Silva')">Adicionar ao Carrinho</button>
+      </div>
+
+      <!-- Produto 3: Abacate -->
+      <div class="produto">
+        <img src="img/aguacate.jpg" alt="Abacate" class="produto-img">
+        <h3>Abacate</h3>
+        <p>Produtor: Antonio Burs</p>
+        <p>R$ 8,00/kg</p>
+        <button onclick="adicionarAoCarrinho('Abacate', 8, 'Antonio Burs')">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtores">
+    <h2>Conheça os Produtores</h2>
+    <div class="produtores-container">
+      <div class="produtor">
+          <img src="img/produtor1.jpg" alt="Produtor João da Silva">
+          <h3>João da Silva</h3>
+          <p>Produz hortaliças orgânicas no bairro São Miguel.</p>
+      </div>
+      <div class="produtor">
+          <img src="img/produtora2.jpg" alt="Produtora Maria Oliveira">
+          <h3>Maria Oliveira</h3>
+          <p>Especialista em queijos artesanais e derivados do leite.</p>
+      </div>
+      <div class="produtor">
+          <img src="img/produtor3.jpg" alt="Produtor Carlos Mendes">
+          <h3>Carlos Mendes</h3>
+          <p>Produtor de frutas frescas e geleias naturais.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios">
+    <h2>Benefícios</h2>
+    <div class="carousel">
+      <div class="carousel-container">
+        <ul id="carousel-list">
+          <li class="slide">
+           <img src="img/slide001.jpg" alt="Oferta">
+            <p>💸 Qualidade com preço acessível</p>
+          </li>
+          <li class="slide">
+            <img src="img/slide002.jpg" alt="Agricultor">
+            <p>🤝 Apoie pequenos produtores</p>
+          </li>
+        </ul>
+      </div>
+      <button class="carousel-btn prev">❮</button>
+      <button class="carousel-btn next">❯</button>
+    </div>
+  </section>
+
+  <section id="carrinho">
+    <h2>Carrinho de Compras</h2>
+    <div id="carrinho-itens">
+      <p>Nenhum item no carrinho.</p>
+    </div>
+    <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
+    <button onclick="limparCarrinho()">Limpar Carrinho</button>
+  </section>
+
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <form id="formContato">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Feira Rural de Medianeira - Projeto fictício escolar</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
